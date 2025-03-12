@@ -1,0 +1,31 @@
+.accueil {
+  &__selection {
+    width: 45%;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    &__new {
+      background: $primary-color;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 0.3rem 3rem 0.3rem 3rem;
+      width: min-content;
+      position: absolute;
+      top: 0;
+    }
+    &__logo {
+      width: 150px;
+      position: absolute;
+      top: 2rem;
+    }
+    &__illustration {
+      width: 325px;
+      margin-top: 1rem;
+    }
+  }
+}
