@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+header {
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #bf1e2e;
+}
+
+.header__infos {
+  color: #959595;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.header__infos__start {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.header__infos__start__tel > svg {
+  font-size: 0.7rem;
+  margin-right: 0.2rem;
+}
+.header__infos__end {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  align-items: center;
+}
+.header__infos__end__newsletter {
+  color: #959595;
+}
+.header__infos__end__reseauxsociaux {
+  display: flex;
+  font-size: 1.1rem;
+  -moz-column-gap: 0.3rem;
+       column-gap: 0.3rem;
+}
+.header__infos__end__reseauxsociaux > a {
+  color: #bf1e2e;
+  padding: 0 0.3rem 0 0.3rem;
+}
+.header__infos__end__reseauxsociaux > a:hover {
+  color: hsl(354.0372670807, 70%, 30%);
+  background: rgba(149, 149, 149, 0.2);
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.header__nav > a {
+  font-size: 1.1rem;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  border: 2px solid transparent;
+}
+.header__nav > a:hover {
+  border: 2px black solid;
+  border-radius: 2px;
+  background: rgba(149, 149, 149, 0.1);
+}/*# sourceMappingURL=App.css.map */
