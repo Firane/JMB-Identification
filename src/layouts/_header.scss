@@ -1,0 +1,63 @@
+@import "../utils/variables";
+@import "../utils/functions";
+
+.header {
+  &__infos {
+    color: #959595;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    &__start {
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+      &__tel {
+        & > svg {
+          font-size: 0.7rem;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+    &__end {
+      display: flex;
+      width: 50%;
+      justify-content: flex-end;
+      column-gap: 3rem;
+      align-items: center;
+      &__newsletter {
+        color: #959595;
+      }
+      &__reseauxsociaux {
+        display: flex;
+        font-size: 1.1rem;
+        column-gap: 0.3rem;
+        & > a {
+          color: $primary-color;
+          padding: 0 0.3rem 0 0.3rem;
+          &:hover {
+            color: darken-color($primary-color, 30%);
+            background: rgba(149, 149, 149, 0.2);
+          }
+        }
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    & > a {
+      font-size: 1.1rem;
+      padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+      border: 2px solid transparent;
+      &:hover {
+        border: 2px black solid;
+        border-radius: 2px;
+        background: rgba(149, 149, 149, 0.1);
+      }
+    }
+  }
+}
