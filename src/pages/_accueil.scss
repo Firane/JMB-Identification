@@ -1,31 +1,206 @@
+@import "../utils/mixins";
+@import "../utils/animation";
+
 .accueil {
-  &__selection {
-    width: 45%;
-    max-height: 500px;
+  &__decouverte {
+    display: flex;
+    justify-content: center;
+    column-gap: 6rem;
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+    &__selection {
+      // max-height: 500px;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2rem;
+      &__illustration {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &__new {
+          background: $primary-color;
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 700;
+          padding: 0.3rem 3rem 0.3rem 3rem;
+          width: min-content;
+          position: absolute;
+          top: -2rem;
+        }
+        &__logo {
+          width: 150px;
+          position: absolute;
+          top: 0rem;
+        }
+        &__image {
+          width: 350px;
+          margin-top: 1rem;
+        }
+        &__figcaption {
+          position: absolute;
+          width: 60%;
+          font-size: 1.25rem;
+          right: 0rem;
+          bottom: 0rem;
+          text-align: right;
+        }
+      }
+      &__carrousel {
+        @include carrousel;
+        margin-top: 3rem;
+        &__cells {
+          // border: 1px solid black;
+          overflow: hidden;
+          // animation: defilement 5s infinite linear;
+          // position: absolute;
+          // height: 150px;
+          // flex: 0 0 100%;
+          &__unit {
+            width: 170px;
+            // animation: defilement 2s infinite;
+            &__image {
+              max-width: 40px;
+            }
+          }
+        }
+      }
+    }
+    &__aside {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      & > button {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1rem;
+        padding: 1rem;
+        border: 4px solid transparent;
+        text-align: left;
+        & > img {
+          width: 60px;
+        }
+        &:hover {
+          border: 4px solid black;
+        }
+        & > div {
+          & > div {
+            font-weight: 500;
+            font-size: 1.1rem;
+          }
+          & > h3 {
+            margin-bottom: 0.3rem;
+            margin-top: 0.3rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+  &__secteurs {
     display: flex;
     flex-direction: column;
-    position: relative;
     justify-content: center;
     align-items: center;
-    padding-top: 2rem;
-    &__new {
-      background: $primary-color;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 700;
-      padding: 0.3rem 3rem 0.3rem 3rem;
-      width: min-content;
-      position: absolute;
-      top: 0;
+    background: #e6e6e6;
+    margin-top: 6rem;
+    // position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 3rem 0rem 3rem 0rem;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      > h2 {
+        width: 90%;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 4rem;
+      }
     }
-    &__logo {
-      width: 150px;
-      position: absolute;
-      top: 2rem;
+
+    &__icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: 3rem;
+      width: 80%;
+      &__label {
+        width: 16%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        > div {
+          width: 70%;
+          text-align: center;
+          font-weight: 600;
+        }
+        > img {
+          width: 50px;
+        }
+      }
     }
-    &__illustration {
-      width: 325px;
-      margin-top: 1rem;
+    &__dots {
+      margin-top: 5rem;
+      width: 5%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+  }
+  &__infos {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      column-gap: 3rem;
+    }
+    &__card {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      width: 20%;
+      column-gap: 1rem;
+      &__icon {
+        background: #e6e6e6;
+        padding: 1rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        aspect-ratio: 1/1;
+        font-size: 1.3rem;
+      }
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        & > h3 {
+          margin: 0;
+          margin-bottom: 0.2rem;
+        }
+        & > div {
+          color: #aab9c2;
+          font-size: 1.1rem;
+        }
+      }
     }
   }
 }

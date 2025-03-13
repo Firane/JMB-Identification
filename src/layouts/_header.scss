@@ -2,6 +2,7 @@
 @import "../utils/functions";
 
 .header {
+  max-width: 1500px;
   &__infos {
     color: #959595;
     display: flex;
@@ -56,7 +57,7 @@
       &:hover {
         border: 2px black solid;
         border-radius: 2px;
-        background: rgba(149, 149, 149, 0.1);
+        // background: rgba(149, 149, 149, 0.1);
       }
     }
   }
