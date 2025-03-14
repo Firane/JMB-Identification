@@ -53,9 +53,9 @@
     & > a {
       font-size: 1.1rem;
       padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-      border: 2px solid transparent;
+      border: 4px solid transparent;
       &:hover {
-        border: 2px black solid;
+        border: 4px black solid;
         border-radius: 2px;
         // background: rgba(149, 149, 149, 0.1);
       }

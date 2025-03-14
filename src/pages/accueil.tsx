@@ -18,6 +18,11 @@ import voiture from "../img/voiture.png";
 import aeronautiques from "../img/aeronautiques.png";
 import minerals from "../img/minerals.png";
 import audit from "../img/audit.png";
+import logojmbbig from "../img/jmblogobig.png";
+import activitePanneau from "../img/activite_panneau.png";
+import activitePrinter from "../img/activite_printer.png";
+import activiteEtiquetage from "../img/activite_etiquetage.png";
+import activiteSecurite from "../img/activite__securite.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -278,6 +283,92 @@ function accueil() {
                 Pour vous accompagner, nous vous proposons des formations vous
                 assurant une prise en main rapide, et une productivité maximale.
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="accueil__experience">
+        <div>
+          <div className="accueil__experience__image">
+            <img src={logojmbbig} alt="logo jmb" />
+          </div>
+          <div className="accueil__experience__text">
+            <h3 className="accueil__experience__text__title">
+              25 ans d'expérience à votre service
+            </h3>
+            <div className="accueil__experience__text__subtitle">
+              Partenaire du fabricant Brady, leader mondial
+            </div>
+            <p className="accueil__experience__text__paragraphe">
+              JMB Identification met à profit son expérience de résolution des
+              problèmes d'étiquetage pour garantir une approche efficace de vos
+              demandes. Fondée en 1998, JMB IDENTIFICATION est reconnue par les
+              entreprises pour son expertise dans les applications de repérage
+              et marquage, offrant une gamme de 34 000 références pour répondre
+              à vos multiples demandes.
+            </p>
+            <p className="accueil__experience__text__paragraphe">
+              Présente en France, DOM-TOM et en Afrique du nord (Maroc, Algérie,
+              Tunisie, Sénégal, Togo), JMB IDENTIFICATION se charge de vos
+              missions d'identification des locaux, que ce soit pour signaler un
+              danger, une interdiction, ou une obligation.
+            </p>
+            <p className="accueil__experience__text__paragraphe">
+              De plus, JMB IDENTIFICATION conçoit et développe des solutions
+              logicielles dans les domaines de la traçabilité, de la
+              consignation, et de l'inventaire des actifs immobilisés en milieu
+              hospitalier.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="accueil__activites">
+        <div>
+          <h3 className="accueil__activites__title">Les actualités récentes</h3>
+          <div className="accueil__activites__cards-container">
+            <div className="accueil__activites__cards-container__card">
+              <img
+                className="accueil__activites__cards-container__card__image"
+                src={activitePanneau}
+                alt="Panneau sur portail"
+              />
+              <div className="accueil__activites__cards-container__card__date">
+                février 10, 2025
+              </div>
+              <h4>Mettez l'accent sur la sécurité</h4>
+            </div>
+            <div className="accueil__activites__cards-container__card">
+              <img
+                className="accueil__activites__cards-container__card__image"
+                src={activiteEtiquetage}
+                alt="A REMPLIR"
+              />
+              <div className="accueil__activites__cards-container__card__date">
+                février 10, 2025
+              </div>
+              <h4>Optimisez vos installations grâce à l'étiquetage</h4>
+            </div>
+            <div className="accueil__activites__cards-container__card">
+              <img
+                className="accueil__activites__cards-container__card__image"
+                src={activiteSecurite}
+                alt="Panneau sur portail"
+              />
+              <div className="accueil__activites__cards-container__card__date">
+                février 7, 2025
+              </div>
+              <h4>Renforcez la sécurité durant la maintenance des machines</h4>
+            </div>
+            <div className="accueil__activites__cards-container__card">
+              <img
+                className="accueil__activites__cards-container__card__image"
+                src={activitePrinter}
+                alt="Panneau sur portail"
+              />
+              <div className="accueil__activites__cards-container__card__date">
+                février 7, 2025
+              </div>
+              <h4>Imprimantes à cartes et badges d'identification Magicard</h4>
             </div>
           </div>
         </div>

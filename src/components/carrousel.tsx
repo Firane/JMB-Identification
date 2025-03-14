@@ -24,7 +24,7 @@ const Carrousel: React.FC<CarrouselProps> = ({
   const [margin, setMargin] = useState<number>(0);
   return (
     <div className={`${classstring}__carrousel`}>
-      <button type="button" className={`${classstring}__carrousel__leftarrow`}>
+      <button type="button" className={`${classstring}__carrousel__left-arrow`}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <div
@@ -34,9 +34,9 @@ const Carrousel: React.FC<CarrouselProps> = ({
       >
         {carrouselData.map((item, index) => (
           <div className={`${classstring}__carrousel__cells__unit`} key={index}>
-            <p className={`${classstring}__carrousel__cells__unit__title`}>
+            <div className={`${classstring}__carrousel__cells__unit__title`}>
               {item.description}
-            </p>
+            </div>
             <img
               className={`${classstring}__carrousel__cells__unit__image`}
               src={item.image}
@@ -45,7 +45,10 @@ const Carrousel: React.FC<CarrouselProps> = ({
           </div>
         ))}
       </div>
-      <button type="button" className={`${classstring}__carrousel__rightArrow`}>
+      <button
+        type="button"
+        className={`${classstring}__carrousel__right-arrow`}
+      >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>
