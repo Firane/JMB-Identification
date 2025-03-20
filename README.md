@@ -1,6 +1,6 @@
 👋👋
 
-#Lancer le front
+# Lancer le front
 
 ## Télécharger le fichier du projet, et le décompresser(winrar, 7zip...)
 
