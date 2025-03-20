@@ -1,3 +1,4 @@
+import Dropdown from "../components/dropdown";
 import imprimante from "../img/imprimante.jpg";
 import logomagiccard from "../img/LogoMagiccard.png";
 import cadenas from "../img/cadenastemplate.png";
@@ -119,46 +120,62 @@ function accueil() {
             ></Carrousel>
           </article>
           <aside className="accueil__decouverte__aside">
-            <button className="accueil__decouverte__aside__identification">
-              <img src={etiquette} alt="etiquette icone" />
-              <div>
-                <h3>IDENTIFICATION DE SECURITE</h3>
-                <div>
-                  Equipement d'usine, etiquetage visuel, panneaux sécuritaires,
-                  marquage au sol ...
-                </div>
-              </div>
-            </button>
-            <button className="accueil__decouverte__aside__consignation">
-              <img src={cadenaicon} alt="cadenas icon" />
-              <div>
-                <h3>CONSIGNATION, CONDAMNATION</h3>
-                <div>
-                  Risque électrique, risque mécanique, cadenas, accessoires sur
-                  mesure, ...
-                </div>
-              </div>
-            </button>
-            <button className="accueil__decouverte__aside__application">
-              <img src={codebarre} alt="code barre icon" />
-              <div>
-                <h3>APPLICATION, REPERAGE ET MARQUAGE</h3>
-                <div>
-                  Contraintes hospitalières, LEAN 5s, Armoire éléctrique, RFID,
-                  échafaudages, ...
-                </div>
-              </div>
-            </button>
-            <button className="accueil__decouverte__aside__materiels">
-              <img src={chariot} alt="chariot icon" />
-              <div>
-                <h3>MATERIELS ET CONSOMMABLES</h3>
-                <div>
-                  Imprimantes, Rubans, Lecteurs, EPI, Marquage industriel,
-                  Materiel de chantier...
-                </div>
-              </div>
-            </button>
+            <Dropdown
+              title="IDENTIFICATION DE SECURITE"
+              description="Equipement d'usine, etiquetage visuel, panneaux sécuritaires,
+                  marquage au sol ..."
+              classname="accueil__decouverte__aside__identification"
+              image={etiquette}
+            >
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Mollitia deleniti voluptatum ad consequatur ab laborum tenetur,
+                dolor minima non! Perferendis eveniet magnam assumenda facilis
+                esse repellendus, unde laborum! Illo, exercitationem.
+              </p>
+            </Dropdown>
+            <Dropdown
+              title="CONSIGNATION, CONDAMNATION"
+              description="Risque électrique, risque mécanique, cadenas, accessoires sur
+                  mesure, ..."
+              image={cadenaicon}
+              classname="accueil__decouverte__aside__consignation"
+            >
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis accusamus quasi ipsam. Odit nobis impedit vero nihil,
+                officiis deserunt ipsum quis recusandae eum architecto fuga!
+                Molestias a eveniet alias nihil!
+              </p>
+            </Dropdown>
+            <Dropdown
+              title="APPLICATION, REPERAGE ET MARQUAGE"
+              classname="accueil__decouverte__aside__application"
+              image={codebarre}
+              description="Contraintes hospitalières, LEAN 5s, Armoire éléctrique, RFID,
+                  échafaudages, ..."
+            >
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Accusantium dolorum, harum iusto libero saepe laborum est? Odit
+                ipsa eaque rerum hic consequuntur officia quia. Nulla veritatis
+                totam excepturi libero iste.
+              </p>
+            </Dropdown>
+            <Dropdown
+              title="MATERIELS ET CONSOMMABLES"
+              classname="accueil__decouverte__aside__materiels"
+              description="Imprimantes, Rubans, Lecteurs, EPI, Marquage industriel,
+                  Materiel de chantier..."
+              image={chariot}
+            >
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sunt
+                perspiciatis tempore culpa vel natus? Ipsum magni porro id
+                accusantium unde, voluptatum veniam, beatae cum optio, odit ea
+                iure temporibus.
+              </p>
+            </Dropdown>
           </aside>
         </div>
       </section>

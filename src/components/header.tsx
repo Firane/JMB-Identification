@@ -6,7 +6,6 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import logo from "../img/logo.jpg";
 
 library.add(faS, faClock, faPhone, faYoutube, faInstagram, faLinkedin);
 
@@ -29,7 +28,6 @@ function header() {
             Newsletter
           </a>
           <div className="header__infos__end__reseauxsociaux">
-            {" "}
             <a href="http://google.fr">
               <FontAwesomeIcon icon={faYoutube} />
             </a>
@@ -42,35 +40,6 @@ function header() {
           </div>
         </div>
       </div>
-      <nav className="header__nav">
-        <div className="header__nav__logo">
-          <img src={logo} alt="logo jmb" />
-        </div>
-        <a className="header__nav__accueil" href="http://google.fr">
-          Accueil
-        </a>
-        <a href="http://google.fr" className="header__nav__imprimantes">
-          Imprimantes
-        </a>
-        <a href="http://google.fr" className="header__nav__services">
-          Services
-        </a>
-        <a
-          href="http://google.fr"
-          className="header__nav__Consommablesetproduits"
-        >
-          Consommables & Produits
-        </a>
-        <a href="http://google.fr" className="header__nav__sinformer">
-          S'informer
-        </a>
-        <a href="http://google.fr" className="header__nav__nous">
-          Qui sommes nous ?
-        </a>
-        <a href="http://google.fr" className="header__nav__contact">
-          Nous contacter
-        </a>
-      </nav>
     </header>
   );
 }
