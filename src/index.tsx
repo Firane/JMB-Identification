@@ -13,6 +13,10 @@ import reportWebVitals from "./reportWebVitals";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import Admin from "./pages/admin";
+import Edit from "./pages/edit";
+import DeleteArticle from "./pages/delete";
+import Add from "./pages/add";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -28,9 +32,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/information" element={<Information />} />
           <Route path="/nous" element={<Nous />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/worlds" element={<Worlds />} />
-          <Route path="/spell" element={<Spell />} />
-          <Route path="/character" element={<Character />} /> */}
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/edit" element={<Edit />} />
+          <Route path="/add" element={<Add />} />
+          <Route path="/delete" element={<DeleteArticle />} />
         </Routes>
       </Router>
       <Footer />

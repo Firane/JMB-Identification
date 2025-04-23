@@ -58,9 +58,11 @@ function Dropdown({
 
   useEffect(() => {
     if (contentRef.current) {
-      setcontentHeight(contentRef.current.scrollHeight);
+      console.log(contentRef);
+      console.log(contentRef.current.offsetHeight);
+      setcontentHeight(contentRef.current.offsetHeight);
     }
-  }, []); // S'exécute uniquement au premier rendu // Executed at the first render
+  }, [isOpen]); // S'exécute uniquement au premier rendu // Executed at the first render
 
   function animationContainerShow(sibling: any) {
     sibling.animate(
@@ -93,43 +95,6 @@ function Dropdown({
       }
     );
   } // Ceci me permet de faire retressir l'element dans lequel est contenu le dropdown. // It's made to shrank the parent element of the dropdown.
-
-  function animationDropdownHide(sibling: any) {
-    sibling.firstChild.animate(
-      [
-        {
-          transform: "translateY(0)",
-        },
-        {
-          transform: "translateY(-100%)",
-        },
-      ],
-      {
-        fill: "forwards",
-        easing: "ease-in-out",
-        duration: (contentHeight / 100) * 200,
-      }
-    );
-  } // Ceci me permet de cache le contenu de mon dropdown, creer un effet defilement de texte lorsqu'il est couple a animationContainerHide()
-
-  function animationDropdownShow(sibling: any) {
-    sibling.firstChild.animate(
-      [
-        {
-          transform: "translateY(-100%)",
-        },
-        {
-          transform: "translateY(0)",
-        },
-      ],
-      {
-        fill: "forwards",
-        easing: "ease-in-out",
-        duration: (contentHeight / 100) * 200,
-      }
-    );
-  } // Ceci me permet de montrer le contenu de mon dropdown, creer un effet defilement de texte lorsqu'il est couple a animationContainerShow()
-  // It's made to show the dropdown's content. It create a scroll effect with the text when he used with animationcontainerShow()
 
   return (
     <div className={classname}>
@@ -177,10 +142,9 @@ function Dropdown({
         </div>
       </button>
       <div
-        ref={contentRef}
         className={`${classname}__content ${isOpen ? "displayed" : "hidden"}`}
       >
-        <div>
+        <div ref={contentRef}>
           {/* Je rajoute une div ici car ma propriete height:0px ne prend pas en compte mon padding */}
           {dropdownChildrenProps?.map((element) => {
             return (
